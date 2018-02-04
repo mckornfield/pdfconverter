@@ -6,7 +6,7 @@ First you will need to create an api_key.txt file, which contains a key (no quot
 
 Second you will need to load the virtual environment using `source venv/Scripts/activate`
 
-Third you will need to install the pdf client `pip install git+https://github.com/pdftables/python-pdftables-api.git`
+Third you will need to install the pdf client `pip install git+https://github.com/pdftables/python-pdftables-api.git` (actually this should already be done by loading the virtualenv)
 
 ### Usage
 
