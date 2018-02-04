@@ -1,3 +1,4 @@
+import sys
 import pdftables_api
 import argparse
 
@@ -14,12 +15,15 @@ with open('api_key.txt') as key_file:
 if not key:
     raise Exception("You must specify an API key within an api_key.txt file in this same directory")
 
+
 print("Key is " + key)
+sys.stdout.flush()
 
 # Get filename
 file_name = args.name if args.name is not None else 'output'
 print("Filename = " + file_name) 
 print("Attempting to create file: " + file_name + ".xlsx from " + args.pdf)
+sys.stdout.flush()
 
 client = pdftables_api.Client(key)
 client.xlsx(args.pdf, file_name)
