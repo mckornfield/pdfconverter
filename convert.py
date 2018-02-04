@@ -26,6 +26,6 @@ print("Attempting to create file: " + file_name + ".xlsx from " + args.pdf)
 sys.stdout.flush()
 
 client = pdftables_api.Client(key)
-client.xlsx(args.pdf, file_name)
+client.xlsx_single(args.pdf, file_name)
 
 print("File created successfully")
