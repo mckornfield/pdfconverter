@@ -25,6 +25,9 @@ print(folder)
 glob_string = "{}/*.pdf".format(folder)
 print(glob_string)
 files = glob.glob(glob_string)
+if not files:
+    print("No files in " + folder + " that end in .pdf, exiting now")
+    sys.exit(0)
 print("Will attempt to convert these files: ",)
 print(files)
 for pdfName in files:
@@ -34,3 +37,4 @@ for pdfName in files:
     client.xlsx_single(pdfName, xlsxName)
     print("File created successfully")
     sys.stdout.flush()
+sys.exit(0)
