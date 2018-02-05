@@ -6,7 +6,7 @@ import os
 
 #Parse arguments
 parser = argparse.ArgumentParser(description='Creates an xlsx spreadsheet from a pdf file')
-parser.add_argument('-f','--folder', help='Path to Folder', required=True)
+parser.add_argument('-f','--folder', help='Path to Folder')
 args = parser.parse_args()
 
 #Read API Key
@@ -16,14 +16,16 @@ with open('api_key.txt') as key_file:
 if not key:
     raise Exception("You must specify an API key within an api_key.txt file in this same directory")
 
-
-print("Key is " + key)
-sys.stdout.flush()
-
-# Get filename
-
 client = pdftables_api.Client(key)
-files = glob.glob("{}/*.pdf".format(args.folder))
+
+folder = args.folder if args.folder is not None else "./pdfs"
+
+print(folder)
+
+glob_string = "{}/*.pdf".format(folder)
+print(glob_string)
+files = glob.glob(glob_string)
+print("Will attempt to convert these files: ",)
 print(files)
 for pdfName in files:
     xlsxName = os.path.splitext(pdfName)[0] + ".xlsx"
