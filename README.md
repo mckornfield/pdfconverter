@@ -10,6 +10,13 @@ Third you will need to install the pdf client `pip install git+https://github.co
 
 ### Usage
 
-The script takes two arguments, --pdf or -p as the path to the pdf file, and --name or -n as the name of the output xslx file
+The script takes one argument, -f or --folder, which is the path to the folder of pdfs to convert
+
+The API key is rate limited to 50 by default. It is 15 dollars for 500 pages worth of conversion (which is fairly decent)
+Currently coded, an api_key.txt file must be in the same folder as the script or executable or the script will not work
 
 You can type `python convert.py -h` to see how to use it
+
+## Installer
+
+An executable can be generated using pyinstaller convert.spec. It will generate an executable and a folder inside a /dist folder
