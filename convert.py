@@ -1,11 +1,12 @@
 import sys
 import pdftables_api
 import argparse
+import glob
+import os
 
 #Parse arguments
 parser = argparse.ArgumentParser(description='Creates an xlsx spreadsheet from a pdf file')
-parser.add_argument('-p','--pdf', help='Path to PDF', required=True)
-parser.add_argument('--name', help='Name of created file')
+parser.add_argument('-f','--folder', help='Path to Folder', required=True)
 args = parser.parse_args()
 
 #Read API Key
@@ -20,12 +21,14 @@ print("Key is " + key)
 sys.stdout.flush()
 
 # Get filename
-file_name = args.name if args.name is not None else 'output'
-print("Filename = " + file_name) 
-print("Attempting to create file: " + file_name + ".xlsx from " + args.pdf)
-sys.stdout.flush()
 
 client = pdftables_api.Client(key)
-client.xlsx_single(args.pdf, file_name)
-
-print("File created successfully")
+files = glob.glob("{}/*.pdf".format(args.folder))
+print(files)
+for pdfName in files:
+    xlsxName = os.path.splitext(pdfName)[0] + ".xlsx"
+    print("Attempting to create file: " + xlsxName + " from " + pdfName)
+    sys.stdout.flush()
+    client.xlsx_single(pdfName, xlsxName)
+    print("File created successfully")
+    sys.stdout.flush()
