@@ -11,7 +11,7 @@ source venv/Scripts/activate
 1. Make sure pip is installed using `pip --version`
 1. Run `pip install -r requirements.txt`
 
-NOTE: You will need to source the virtual environment after first time setup but everything else will be the same
+NOTE: You will need to source the virtual environment after first time setup but everything else is only required if the `venv` directory is deleted
 
 ### Usage
 
