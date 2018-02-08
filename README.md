@@ -2,11 +2,16 @@
 
 Prereq: Python3, pip
 
-1. Make sure python3 is installed `python --version` should be something above 3.4+
+1. Make sure python3 is installed using `python --version`
 1. Load a virtual environment in this directory if it's the first time, using `python -m venv venv`
-1. Source the virtual enviroment (this will need to be done every time you open a new terminal `source venv/Scripts/activate`
-1. Make sure pip is installed `pip --version`
+1. Source the virtual enviroment (this will need to be done every time you open a new terminal)
+```
+source venv/Scripts/activate
+```
+1. Make sure pip is installed using `pip --version`
 1. Run `pip install -r requirements.txt`
+
+NOTE: You will need to source the virtual environment after first time setup but everything else will be the same
 
 ### Usage
 
@@ -19,4 +24,4 @@ You can type `python convert.py -h` to see how to use it
 
 ### Installer
 
-An executable can be generated using `pyinstaller convert.spec`. It will generate an executable and a folder inside a /dist folder
+An executable can be generated using `pyinstaller convert.spec`. It will generate an executable and a folder inside a /dist folder. Simply move the api_key.txt document into the same folder and it will run automatically on any `pdfs` folder. Can also be run with a path argument via the cmd prompt.
