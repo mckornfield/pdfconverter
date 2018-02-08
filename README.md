@@ -19,4 +19,4 @@ You can type `python convert.py -h` to see how to use it
 
 ## Installer
 
-An executable can be generated using `pyinstaller convert.spec`. It will generate an executable and a folder inside a /dist folder
+An executable can be generated using `pyinstaller convert.spec`pip install git+https://github.com/pdftables/python-pdftables-api.git. It will generate an executable and a folder inside a /dist folder
