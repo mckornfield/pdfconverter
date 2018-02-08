@@ -2,12 +2,13 @@
 
 Prereq: Python3, pip
 
+1. There is a setup.sh script that can be run, and then `source venv/Scripts/activate`
+
+OR
+
 1. Make sure python3 is installed using `python --version`
 1. Load a virtual environment in this directory if it's the first time, using `python -m venv venv`
-1. Source the virtual enviroment (this will need to be done every time you open a new terminal)
-```
-source venv/Scripts/activate
-```
+1. Source the virtual enviroment (this will need to be done every time you open a new terminal) `source venv/Scripts/activate`
 1. Make sure pip is installed using `pip --version`
 1. Run `pip install -r requirements.txt`
 
