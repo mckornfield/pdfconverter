@@ -2,3 +2,5 @@ api_key.txt
 build
 dist
 venv/
+__pycache__
+pdfs/
