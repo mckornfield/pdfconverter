@@ -15,12 +15,12 @@ NOTE: You will need to source the virtual environment after first time setup but
 
 ### Usage
 
-The script takes one argument, -f or --folder, which is the path to the folder of pdfs to convert
+The script takes one argument, `-f` or `--folder`, which is the path to the folder of pdfs to convert. By default it searches for a `pdfs` folder in the same directory as the script.
 
 The API key is rate limited to 50 by default. It is 15 dollars for 500 pages worth of conversion (which is fairly decent)
-Currently coded, an api_key.txt file must be in the same folder as the script or executable or the script will not work
+Currently coded, an api_key.txt file must be in the same folder as the script or executable or the script will not work.
 
-You can type `python convert.py -h` to see how to use it
+You can type `python convert.py -h` to see how to use it.
 
 ### Installer
 
