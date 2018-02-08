@@ -1,4 +1,4 @@
 # This is a normal install
 pyinstaller
-# This is for py_tables
+# This is for pdftables API, which is not listed normally
 git+https://github.com/pdftables/python-pdftables-api.git
