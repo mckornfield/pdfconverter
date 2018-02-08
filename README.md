@@ -1,12 +1,12 @@
 ### Setup
 
-Prereq: Python3
+Prereq: Python3, pip
 
-First you will need to create an api_key.txt file, which contains a key (no quotes). You can get them from here: https://pdftables.com/pdf-to-excel-api
-
-Second you will need to load the virtual environment using `source venv/Scripts/activate`
-
-Third you will need to install the pdf client `pip install git+https://github.com/pdftables/python-pdftables-api.git` (actually this should already be done by loading the virtualenv)
+1. Make sure python3 is installed `python --version` should be something above 3.4+
+1. Load a virtual environment in this directory if it's the first time, using `python -m venv venv`
+1. Source the virtual enviroment (this will need to be done every time you open a new terminal `source venv/Scripts/activate`
+1. Make sure pip is installed `pip --version`
+1. Run `pip install -r requirements.txt`
 
 ### Usage
 
@@ -17,6 +17,6 @@ Currently coded, an api_key.txt file must be in the same folder as the script or
 
 You can type `python convert.py -h` to see how to use it
 
-## Installer
+### Installer
 
-An executable can be generated using `pyinstaller convert.spec`pip install git+https://github.com/pdftables/python-pdftables-api.git. It will generate an executable and a folder inside a /dist folder
+An executable can be generated using `pyinstaller convert.spec`. It will generate an executable and a folder inside a /dist folder
